@@ -4,9 +4,11 @@ import shutil
 from dotenv import load_dotenv
 import os
 
+#load environment
 load_dotenv()
 PIXIV_REFRESH_TOKEN = os.getenv('PIXIV_REFRESH_TOKEN')
 
+#Setup pixivpy api
 api = AppPixivAPI()
 api.auth(refresh_token=PIXIV_REFRESH_TOKEN)
 
